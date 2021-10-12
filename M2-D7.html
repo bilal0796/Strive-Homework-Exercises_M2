@@ -50,18 +50,22 @@
             .list-unstyled.mb-0 li a{
                 color: rgb(77, 255, 1);
             }
+
             /* EX8) Write a selector to target the second post author */
             .blog-post-meta a {
             color: rgb(9, 255, 0);
             }
+
             /* EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly */
             .blog-footer p:nth-child(2) a{
                 color: rgb(77, 255, 1);
-            } 
+            }
+
             /* EX10) Write a selector to target the footer */
             .blog-footer{
                 background-color: rgb(144, 152, 140);
             }
+
     </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -425,19 +429,26 @@
     </footer>
 
     <script>
-        /*
-          JS Exercises
-          EX11) Write a function to add a new link into the navbar
-          EX12) Write a function to change the color of the main title
-          EX13) Write a function to change the background of the jumbotron
-          EX14) Write a function to remove all the links under "Elsewhere"
-          EX15) Write a function to change the column size for heading in jumbotron
-          EX16) Write a function to remove the "Search" magnifying glass icon
-          EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
-          EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
-          EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
-          EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
-      */
+        //   JS Exercises
+        //   EX11) Write a function to add a new link into the navbar
+        const addnewlink = function(content){
+            let newLinkcontainer=document.querySelector(".nav") 
+            let createlink = document.createElement("a")
+            createlink.classList.add("p-2", "text-muted")
+            createlink.href="#"
+            createlink.innerText=content
+            newLinkcontainer.appendChild(createlink)
+        }
+        addnewlink("New Link");
+        //   EX12) Write a function to change the color of the main title
+        //   EX13) Write a function to change the background of the jumbotron
+        //   EX14) Write a function to remove all the links under "Elsewhere"
+        //   EX15) Write a function to change the column size for heading in jumbotron
+        //   EX16) Write a function to remove the "Search" magnifying glass icon
+        //   EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
+        //   EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
+        //   EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
+        //   EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
     </script>
 </body>
 
