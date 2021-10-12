@@ -457,6 +457,12 @@
         changeBackgroundColor()
 
         //   EX14) Write a function to remove all the links under "Elsewhere"
+        const removeLinks = function(){
+            let linksContainer = document.querySelector(".blog-sidebar > div:last-of-type ol")
+            linksContainer.innerHTML=""
+        }
+        removeLinks()
+
         //   EX15) Write a function to change the column size for heading in jumbotron
         //   EX16) Write a function to remove the "Search" magnifying glass icon
         //   EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
