@@ -32,7 +32,7 @@
                 color: rgb(77, 255, 1) !important; 
             }
             /* EX4) Write a selector to target the first blogpost */
-            .blog-post{
+            .blog-main div:nth-child(2){
                 color: rgb(77, 255, 1) !important;
             }
 
@@ -42,7 +42,7 @@
             }
 
             /* EX6) Write a selector to target the last blog post */
-            .blog-main div>:last-of-type{
+            .blog-main div:nth-child(3){
                 color: rgb(255, 244, 90) !important;
             }
 
@@ -55,6 +55,9 @@
             color: rgb(9, 255, 0);
             }
             /* EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly */
+            .blog-footer p:nth-child(2) a{
+                color: rgb(77, 255, 1);
+            } 
             /* EX10) Write a selector to target the footer */
     </style>
     <meta charset="utf-8" />
