@@ -18,7 +18,7 @@
     <style>
         /*
             EX1) Write a selector to target the h1 in jumbotron */
-            .display-4{
+            .jumbotron div>h1{
                 color: rgb(77, 255, 1);
             }
             /* EX2) Write a selector to target every children of the navbar */
@@ -27,10 +27,15 @@
                 font-size:small;
             }
             /* EX3) Write a selector to target the "continue reading..." inside the jumbotron */
-            .lead a{
+            .jumbotron p:last-of-type>a{
                 font-style: italic;
+                color: rgb(77, 255, 1) !important; 
             }
             /* EX4) Write a selector to target the first blogpost */
+            .blog-main div:first-of-type{
+                color: rgb(77, 255, 1) !important;
+            }
+
             /* EX5) Write a selector to target the "even" links in the navbar */
             /* EX6) Write a selector to target the last blog post */
             /* EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives ) */
