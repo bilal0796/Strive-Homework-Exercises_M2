@@ -1,36 +1,232 @@
 <!DOCTYPE html>
-<!--
-IMPORTANT:
-Start from the previous Musical assignment project you've created on M2-D2
-    
-ASSIGNMENT RULES
-- The project must be pushed to a new repository and linked in EduFlow by the end of the day.
-- You can google / use StackOverflow BUT we suggest you to use just the material provided and documentation.
-- To test the page, open it with your browser and inspect it with developer tools / device emulator.
-- Use Bootstrap4.6 classes to create the page.
-- Use containers, rows and cols in order to achieve a great responsive layout.
-
-NOTE:
-Most of the requirements in this exercises reference a bootstrap's functionality or component. 
-Make sure you check the documentation before creting anything custom.
--->
-
 <html>
 
 <head>
-    <!-- IMPORT ALL THE BOOSTRAP RELATED CSS & SCRIPTS-->
+    <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <style>
-        /* PREVIOUS CODE */
+
+        body {
+            background: linear-gradient(45deg, rgb(0, 254, 93) 0%, rgb(247, 231, 55) 100%);
+            background-attachment: fixed;
+            color: white;
+        }
+
+        section {
+            min-height: 93vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .album-container {
+            text-align: center;
+            padding-bottom: 1em;
+            margin: 1em;
+        }
+
+        .album-container img {
+            width: 100%;
+        }
+
+        .album-artist:after {
+            content: ' • '
+        }
+
+        .album-title {
+            margin-top: 0.50em;
+            margin-bottom: 0.25em;
+            font-size: 1.3em
+        }
+
+        .album-genre {
+
+        }
+
+        nav  {
+            background: linear-gradient(45deg, rgb(0, 254, 93) 0%, rgb(247, 231, 55) 100%);
+            font-size: larger;
+            height: 7vh;
+        }
+        .fade-in-image {
+            animation: fadeIn 5s;
+            -webkit-animation: fadeIn 5s;
+            -moz-animation: fadeIn 5s;
+            -o-animation: fadeIn 5s;
+            -ms-animation: fadeIn 5s;
+        }
+        @keyframes fadeIn {
+            0% {opacity:0;}
+            100% {opacity:1;}
+        }
+
+        @-moz-keyframes fadeIn {
+             0% {opacity:0;}
+            100% {opacity:1;}
+        }
+
+        @-webkit-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+        }
+
+        @-o-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+        }
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+        
+        .carousel-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-transform: lowercase;
+            color: #d1d1d1;
+            mix-blend-mode: color-burn;
+            font-weight: 900;
+        }
+
+        .album-tapestry {
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        
+        .squared {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            margin: 10px auto;
+        }
+        
     </style>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#fav-albums">Favourite Albums</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#best-album-ever">Best album ever</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#wall-of-shame">Wall of Shame</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#best-artist-ever">Best artist ever</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#tapestry">The Tapestry Thing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- EXERCISE 1
         Create a Jumbotron section with a quick explanation / image of the website.
         Make it appear with a fade-in animation effect when the page loads.
     -->
+    <div class="jumbotron container fade-in-image" style=" background-color: rgb(196, 250, 142); color: black;">
+        <h1 class="display-4">Queen's music</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-light btn-lg" href="#" role="button">Learn more</a>
+      </div>
+
+
+
+
+    <section id="fav-albums">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="album-container">
+                        <img src="black-holes-and-revelations.jpg" class="img-fluid">
+                        <h4 class="album-title">Black Holes and Revelations</h4>
+                        <span class="album-artist">Muse</span>
+                        <span class="album-genre">Rock</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="album-container">
+                        <img src="end-of-aquarius.jpg" class="img-fluid">
+                        <h4 class="album-title">End of Aquarius</h4>
+                        <span class="album-artist">Droid Bishop</span>
+
+                        <span class="album-genre">Synthwave</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="album-container">
+                        <img src="II.jpeg" class="img-fluid">
+                        <h4 class="album-title">Crystal Castles II</h4>
+                        <span class="album-artist">Crystal Castles</span>
+
+                        <span class="album-genre">Power Electronics</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="album-container">
+                        <img src="it-takes-a-thief.jpeg" class="img-fluid">
+                        <h4 class="album-title">It Takes A Thief</h4>
+                        <span class="album-artist">Thievery Corporation</span>
+                        <span class="album-genre">Acid Jazz</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="album-container">
+                        <img src="black-holes-and-revelations.jpg" class="img-fluid">
+                        <h4 class="album-title">Black Holes and Revelations</h4>
+                        <span class="album-artist">Muse</span>
+                        <span class="album-genre">Rock</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="album-container">
+                        <img src="end-of-aquarius.jpg" class="img-fluid">
+                        <h4 class="album-title">End of Aquarius</h4>
+                        <span class="album-artist">Droid Bishop</span>
+
+                        <span class="album-genre">Synthwave</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="album-container">
+                        <img src="II.jpeg" class="img-fluid">
+                        <h4 class="album-title">Crystal Castles II</h4>
+                        <span class="album-artist">Crystal Castles</span>
+
+                        <span class="album-genre">Power Electronics</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="album-container">
+                        <img src="it-takes-a-thief.jpeg" class="img-fluid">
+                        <h4 class="album-title">It Takes A Thief</h4>
+                        <span class="album-artist">Thievery Corporation</span>
+                        <span class="album-genre">Acid Jazz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- EXERCISE 2
         Use a Bootstrap Card to contain every album in the favorite list you previously created.
