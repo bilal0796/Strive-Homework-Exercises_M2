@@ -105,6 +105,25 @@
             object-fit: cover;
             margin: 10px auto;
         }
+        .card{
+            position: relative;
+        }
+        /* .card::before{
+            position: absolute;
+            content: " ";
+            background-color: blueviolet;
+            height: 29px;
+            width: 29px;
+        } */
+        .card .badge{
+            position: absolute;
+            background: linear-gradient(45deg, rgb(0, 254, 93) 0%, rgb(247, 231, 55) 100%);
+            box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+            /* op: 11px; */
+            right: 0px;
+            height: 29px;
+            width: 100px; 
+        }
         
     </style>
 </head>
@@ -149,19 +168,22 @@
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <a class="btn btn-light btn-lg" href="#" role="button">Learn more</a>
       </div>
+      
     <!-- EXERCISE 2
         Use a Bootstrap Card to contain every album in the favorite list you previously created.
         Use the elements of a card bootstrap provides you with to display nicely the album informations such as: album title, artist, year, etc..
+    
+        -------------combined-------------
+        
+        EXERCISE 3
+        Foreach album in the favorite list, place a badge on the top-left corner of the album with the genre of the music
     -->
-
-
-
-
     <section id="fav-albums">
         <div class="container">
             <div class="row py-5">
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-6 col-md-4 col-lg-3 ">
                     <div class="card" style="width: 18rem;color: black;">
+                        <span class="badge">Rock</span>
                         <img src="black-holes-and-revelations.jpg" class="img-fluid" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">Black Holes and Revelations</h5>
@@ -172,6 +194,7 @@
                 </div>
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="card" style="width: 18rem;color: black;">
+                        <span class="badge">Synthwave</span>
                         <img src="end-of-aquarius.jpg" class="img-fluid" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">End of Aquarius</h5>
@@ -182,6 +205,7 @@
                 </div>
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="card" style="width: 18rem;color: black;">
+                        <span class="badge">Power Electronics</span>
                         <img src="II.jpeg" class="img-fluid" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">Crystal Castles II</h5>
@@ -192,6 +216,7 @@
                 </div>
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="card" style="width: 18rem;color: black;">
+                        <span class="badge">Acid Jazz</span>
                         <img src="it-takes-a-thief.jpeg" class="img-fluid">
                         <div class="card-body">
                           <h5 class="card-title">It Takes A Thief</h5>
@@ -204,6 +229,7 @@
             <div class="row py-5">
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="card" style="width: 18rem;color: black;">
+                        <span class="badge">Acid Jazz</span>
                         <img src="it-takes-a-thief.jpeg" class="img-fluid">
                         <div class="card-body">
                           <h5 class="card-title">It Takes A Thief</h5>
@@ -214,6 +240,7 @@
                 </div>
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="card" style="width: 18rem;color: black;">
+                        <span class="badge">Acid Jazz</span>
                         <img src="it-takes-a-thief.jpeg" class="img-fluid">
                         <div class="card-body">
                           <h5 class="card-title">It Takes A Thief</h5>
@@ -224,6 +251,7 @@
                 </div>
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="card" style="width: 18rem;color: black;">
+                        <span class="badge">Acid Jazz</span>
                         <img src="it-takes-a-thief.jpeg" class="img-fluid">
                         <div class="card-body">
                           <h5 class="card-title">It Takes A Thief</h5>
@@ -234,6 +262,7 @@
                 </div>
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="card" style="width: 18rem;color: black;">
+                        <span class="badge">Acid Jazz</span>
                         <img src="it-takes-a-thief.jpeg" class="img-fluid">
                         <div class="card-body">
                           <h5 class="card-title">It Takes A Thief</h5>
@@ -246,10 +275,6 @@
             </div>
         </div>
     </section>
-
-    <!-- EXERCISE 3
-        Foreach album in the favorite list, place a badge on the top-left corner of the album with the genre of the music
-    -->
 
     <!-- EXERCISE 4
         Create a new section with an album tracklist inside a Bootstrap table.
