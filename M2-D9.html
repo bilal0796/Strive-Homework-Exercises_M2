@@ -118,11 +118,13 @@
         .card .badge{
             position: absolute;
             background: linear-gradient(45deg, rgb(0, 254, 93) 0%, rgb(247, 231, 55) 100%);
-            box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+            box-shadow: 4px 4px 15px rgba(4, 4, 0, 0.2);
             /* op: 11px; */
             right: 0px;
             height: 29px;
             width: 100px; 
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size:smaller;
         }
         
     </style>
@@ -140,7 +142,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#fav-albums">Favourite Albums</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#best-album-ever">Best album ever</a>
                     </li>
                     <li class="nav-item">
@@ -151,6 +153,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#tapestry">The Tapestry Thing</a>
+                    </li> -->
+                    <li>
+                        <a class="nav-link" aria-current="page" href="#Tracklist">Album Tracklist</a>
                     </li>
                 </ul>
             </div>
@@ -168,7 +173,7 @@
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <a class="btn btn-light btn-lg" href="#" role="button">Learn more</a>
       </div>
-      
+
     <!-- EXERCISE 2
         Use a Bootstrap Card to contain every album in the favorite list you previously created.
         Use the elements of a card bootstrap provides you with to display nicely the album informations such as: album title, artist, year, etc..
@@ -283,7 +288,66 @@
         There should be a column for the track order number, one for the title and one for the track duration.
         (If you want, you can also add extra columns)
     -->
-
+    <table id="Tracklist"class="table table-dark container" style="background-color: chartreuse; color: black; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+        <thead style="background-color: chartreuse; font-size: large;">
+          <tr >
+            <th scope="col">Track Order</th>
+            <th scope="col">Album Title</th>
+            <th scope="col">Track duration</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background-color: yellowgreen;">
+            <th scope="row">1</th>
+            <td>black holes and revelations</td>
+            <td>6 mins</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>end of aquarius</td>
+            <td>5 mins</td>
+            <td>@fat</td>
+          </tr>
+          <tr style="background-color: yellowgreen;">
+            <th scope="row">3</th>
+            <td>Crystal Castles II</td>
+            <td>9 mins</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>It it takes a thief</td>
+            <td>6 mins</td>
+            <td>@twitter</td>
+          </tr>
+          <tr style="background-color: yellowgreen;">
+            <th scope="row">5</th>
+            <td>It it takes a thief</td>
+            <td>6 mins</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>It it takes a thief</td>
+            <td>6 mins</td>
+            <td>@twitter</td>
+          </tr >
+          <tr style="background-color: yellowgreen;">
+            <th scope="row">7</th>
+            <td>It it takes a thief</td>
+            <td>6 mins</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>It it takes a thief</td>
+            <td>6 mins</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
     <!-- EXERCISE 5
         Add a DELETE bootstrap button at the end of each row of the tracklist. 
         Attach the functionality to remove its row when it gets clicked. (Requires DOM manipulation)  
